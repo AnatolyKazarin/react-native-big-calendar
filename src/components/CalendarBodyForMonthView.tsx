@@ -110,11 +110,11 @@ function _CalendarBodyForMonthView<T>({
                     { textAlign: 'center' },
                     theme.typography.sm,
                     {
-                      color:
-                        date?.format('YYYY-MM-DD') === now.format('YYYY-MM-DD')
-                          ? theme.palette.primary.main
-                          : theme.palette.gray['800'],
+                      color: theme.palette.gray['800'],
                     },
+                    {
+                      fontWeight: date == 0 ? '700' : '400'
+                    }
                   ]}
                 >
                   {date && date.format('D')}

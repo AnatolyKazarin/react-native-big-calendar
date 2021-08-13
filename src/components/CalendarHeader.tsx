@@ -58,7 +58,7 @@ function _CalendarHeader<T>({
                 style={[
                   theme.typography.xs,
                   u['text-center'],
-                  { color: _isToday ? theme.palette.primary.main : theme.palette.gray['500'] },
+                  { color: theme.palette.gray['300'] },
                 ]}
               >
                 {date.format('ddd')}
@@ -83,9 +83,7 @@ function _CalendarHeader<T>({
                 <Text
                   style={[
                     {
-                      color: _isToday
-                        ? theme.palette.primary.contrastText
-                        : theme.palette.gray['800'],
+                      color: theme.palette.gray['800'],
                     },
                     theme.typography.xl,
                     u['text-center'],

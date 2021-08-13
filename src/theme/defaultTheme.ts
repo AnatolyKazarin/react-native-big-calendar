@@ -4,16 +4,15 @@ export const defaultTheme: ThemeInterface = {
   isRTL: false,
   palette: {
     primary: {
-      main: 'rgb(66, 133, 244)',
-      contrastText: '#fff',
+      main: '#333333',
+      contrastText: '#333333',
     },
     nowIndicator: 'red',
     gray: {
       // 50: '#fafafa',
-      100: '#f5f5f5',
-      200: '#eeeeee',
-      300: '#e0e0e0',
-      // 400: '#bdbdbd',
+      100: '#EBEBEB',
+      200: '#EBEBEB',
+      300: '#9C9C9C',
       500: '#9e9e9e',
       // 600: '#757575',
       // 700: '#616161',
@@ -27,14 +26,15 @@ export const defaultTheme: ThemeInterface = {
     { main: '#5934C7', contrastText: '#fff' }, // purple
   ],
   typography: {
+    fontFamily: 'Roboto',
     xs: {
       fontSize: 10,
     },
     sm: {
-      fontSize: 12,
+      fontSize: 14,
     },
     xl: {
-      fontSize: 22,
+      fontSize: 14,
     },
   },
 }
