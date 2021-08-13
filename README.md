@@ -6,6 +6,8 @@
 
 # react-native-big-calendar
 
+### ⚠️⚠️⚠️ The project was taken from https://github.com/acro5piano/react-native-big-calendar ⚠️⚠️⚠️
+
 Cross-platform gcal/outlook like calendar component for React Native.
 
 ### ⚠️ Help me to debug this component ⚠️
