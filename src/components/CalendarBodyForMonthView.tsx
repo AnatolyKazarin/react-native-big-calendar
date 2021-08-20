@@ -4,7 +4,7 @@ import * as React from 'react'
 import { Platform, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
 
 import { u } from '../commonStyles'
-import { useNow } from '../hooks/useNow'
+// import { useNow } from '../hooks/useNow'
 import { usePanResponder } from '../hooks/usePanResponder'
 import {
   EventCellStyle,
@@ -14,7 +14,7 @@ import {
   WeekNum,
 } from '../interfaces'
 import { useTheme } from '../theme/ThemeContext'
-import { typedMemo } from '../utils'
+import { isWeekend, typedMemo } from '../utils'
 import { CalendarEventForMonthView } from './CalendarEventForMonthView'
 
 interface CalendarBodyForMonthViewProps<T> {
@@ -41,12 +41,12 @@ function _CalendarBodyForMonthView<T>({
   onPressEvent,
   eventCellStyle,
   onSwipeHorizontal,
-  hideNowIndicator,
+  // hideNowIndicator,
   renderEvent,
   maxVisibleEventCount,
   weekStartsOn,
 }: CalendarBodyForMonthViewProps<T>) {
-  const { now } = useNow(!hideNowIndicator)
+  // const { now } = useNow(!hideNowIndicator)
 
   const panResponder = usePanResponder({
     onSwipeHorizontal,
@@ -107,14 +107,14 @@ function _CalendarBodyForMonthView<T>({
               >
                 <Text
                   style={[
-                    { textAlign: 'center' },
+                    { textAlign: 'right' },
                     theme.typography.sm,
                     {
                       color: theme.palette.gray['800'],
                     },
                     {
-                      fontWeight: date == 0 ? '700' : '400'
-                    }
+                      fontWeight: isWeekend(date) ? 'bold' : 'normal',
+                    },
                   ]}
                 >
                   {date && date.format('D')}
@@ -130,9 +130,9 @@ function _CalendarBodyForMonthView<T>({
                         index > maxVisibleEventCount ? null : index === maxVisibleEventCount ? (
                           <Text
                             key={index}
-                            style={{ fontSize: 11, marginTop: 2, fontWeight: 'bold' }}
+                            style={{ fontSize: 11, marginTop: 2, textAlign: 'center' }}
                           >
-                            {events.length - maxVisibleEventCount} More
+                            {`+ ещё ${events.length - maxVisibleEventCount}`}
                           </Text>
                         ) : (
                           <CalendarEventForMonthView

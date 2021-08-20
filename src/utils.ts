@@ -81,6 +81,11 @@ export function isToday(date: dayjs.Dayjs) {
   return today.isSame(date, 'day')
 }
 
+export function isWeekend(date: dayjs.Dayjs | null): boolean {
+  if (date === null) return false
+  return date.day() === 6 || date.day() === 0
+}
+
 export function getRelativeTopInDay(date: dayjs.Dayjs) {
   return (100 * (date.hour() * 60 + date.minute())) / DAY_MINUTES
 }

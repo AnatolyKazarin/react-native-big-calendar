@@ -113,6 +113,9 @@ export const u = StyleSheet.create({
   'text-center': {
     textAlign: 'center',
   },
+  'text-right': {
+    textAlign: 'right',
+  },
 
   /*
    * Radius
@@ -162,9 +165,9 @@ export const u = StyleSheet.create({
   truncate:
     Platform.OS === 'web'
       ? {
-        overflow: 'hidden',
-        // textOverflow: 'ellipsis',
-        // whiteSpace: 'nowrap',
-      }
+          overflow: 'hidden',
+          // textOverflow: 'ellipsis',
+          // whiteSpace: 'nowrap',
+        }
       : {},
 })
