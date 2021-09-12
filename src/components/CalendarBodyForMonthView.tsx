@@ -101,6 +101,7 @@ function _CalendarBodyForMonthView<T>({
                   u['flex-column'],
                   {
                     minHeight: minCellHeight,
+                    overflow: 'hidden',
                   },
                 ]}
                 key={ii}
@@ -128,10 +129,7 @@ function _CalendarBodyForMonthView<T>({
                       (elements, event, index, events) => [
                         ...elements,
                         index > maxVisibleEventCount ? null : index === maxVisibleEventCount ? (
-                          <Text
-                            key={index}
-                            style={{ fontSize: 11, marginTop: 2, textAlign: 'center' }}
-                          >
+                          <Text key={index} style={{ fontSize: 9, textAlign: 'center' }}>
                             {`+ ещё ${events.length - maxVisibleEventCount}`}
                           </Text>
                         ) : (
