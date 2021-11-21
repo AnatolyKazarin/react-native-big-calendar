@@ -34,15 +34,17 @@ function _CalendarHeaderForMonthView({
     >
       {dates.map((date) => (
         <View style={{ flex: 1, paddingTop: 2 }} key={date.toISOString()}>
-          <View style={{ height: 30 }}>
+          <View style={{ height: 24 }}>
             <Text
               style={[
                 u['text-center'],
                 {
-                  color:
-                    todayWeekNum === date.day()
-                      ? theme.palette.primary.main
-                      : theme.palette.gray['800'],
+                  // color:
+                  //   todayWeekNum === date.day()
+                  //     ? theme.palette.primary.main
+                  //     : theme.palette.gray['800'],
+                  color: '#9C9C9C',
+                  fontSize: 10,
                 },
               ]}
             >

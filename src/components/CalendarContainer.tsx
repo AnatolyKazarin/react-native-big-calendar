@@ -159,7 +159,7 @@ function _CalendarContainer<T>({
       if ((direction === 'LEFT' && !theme.isRTL) || (direction === 'RIGHT' && theme.isRTL)) {
         setTargetDate(targetDate.add(modeToNum(mode, targetDate), 'day'))
       } else {
-        setTargetDate(targetDate.add(modeToNum(mode, targetDate) * -1, 'day'))
+        setTargetDate(targetDate.add(modeToNum(mode, targetDate, direction) * -1, 'day'))
       }
     },
     [swipeEnabled, targetDate, mode, theme.isRTL],

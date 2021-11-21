@@ -95,7 +95,11 @@ export function todayInMinutes() {
   return today.diff(dayjs().startOf('day'), 'minute')
 }
 
-export function modeToNum(mode: Mode, current?: dayjs.Dayjs | Date): number {
+export function modeToNum(
+  mode: Mode,
+  current?: dayjs.Dayjs | Date,
+  direction?: 'RIGHT' | 'LEFT',
+): number {
   if (mode === 'month') {
     if (!current) {
       throw new Error('You must specify current date if mode is month')
@@ -103,7 +107,8 @@ export function modeToNum(mode: Mode, current?: dayjs.Dayjs | Date): number {
     if (current instanceof Date) {
       current = dayjs(current)
     }
-    return current.daysInMonth() - current.date() + 1
+    const additionalDay = direction === 'RIGHT' ? 0 : 1
+    return current.daysInMonth() - current.date() + additionalDay
   }
   switch (mode) {
     case 'day':

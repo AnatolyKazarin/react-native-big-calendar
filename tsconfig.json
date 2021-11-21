@@ -39,7 +39,7 @@
     "moduleResolution": "node",
     "module": "esnext",
     "baseUrl": "./",
-    "outDir": "build"
+    "outDir": "types"
   },
   "exclude": [
     "./example/**",

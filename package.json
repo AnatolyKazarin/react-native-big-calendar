@@ -1,12 +1,12 @@
 {
-  "name": "react-native-big-calendar",
-  "version": "2.0.0-rc",
+  "name": "@anatolyk/react-native-big-calendar",
+  "version": "1.0.1",
   "main": "src/index.ts",
   "jsnext:main": "build/index.es.js",
   "module": "build/index.es.js",
-  "types": "build/index.d.ts",
-  "repository": "git@github.com:llotheo/react-native-big-calendar",
-  "author": "gosho-kazuya <ketsume0211@gmail.com>",
+  "types": "types/index.d.ts",
+  "repository": "git@github.com:AnatolyKazarin/react-native-big-calendar",
+  "author": "gosho-kazuya <ketsume0211@gmail.com> | AnatolyKazarin <alkidkaz@gmail.com>",
   "license": "MIT",
   "scripts": {
     "prepare": "simple-git-hooks || true",
