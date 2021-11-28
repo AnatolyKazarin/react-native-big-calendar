@@ -5,6 +5,7 @@ import { CalendarHeaderProps } from './components/CalendarHeader'
 import { CalendarHeaderForMonthViewProps } from './components/CalendarHeaderForMonthView'
 
 export interface ICalendarEventBase {
+  id?: string | number
   start: Date
   end: Date
   title: string

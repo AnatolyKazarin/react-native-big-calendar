@@ -26,4 +26,9 @@ function _Calendar<T>({ theme = defaultTheme, isRTL, ...props }: CalendarProps<T
   )
 }
 
-export const Calendar = typedMemo(_Calendar)
+export const Calendar = React.memo(
+  typedMemo(_Calendar),
+  (prevProps, nextProps) =>
+    JSON.stringify(prevProps.events.map((e) => e.id)) ===
+    JSON.stringify(nextProps.events.map((e) => e.id)),
+)

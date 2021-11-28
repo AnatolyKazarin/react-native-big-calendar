@@ -1,5 +1,3 @@
-import { Calendar } from './components/Calendar'
-
 export * from './components/Calendar'
 export * from './components/CalendarBody'
 export * from './components/CalendarBodyForMonthView'
@@ -15,5 +13,3 @@ export * from './theme/ThemeInterface'
 export * from './theme/defaultTheme'
 export * from './utils'
 export * from './interfaces'
-// eslint-disable-next-line import/no-default-export
-export default Calendar
