@@ -108,7 +108,9 @@ export function modeToNum(
       current = dayjs(current)
     }
     const additionalDay = direction === 'RIGHT' ? 0 : 1
-    return current.daysInMonth() - current.date() + additionalDay
+    return direction === 'RIGHT'
+      ? current.date() + additionalDay
+      : current.daysInMonth() - current.date() + additionalDay
   }
   switch (mode) {
     case 'day':
